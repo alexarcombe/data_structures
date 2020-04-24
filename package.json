@@ -1,0 +1,14 @@
+{
+  "name": "data_structures",
+  "version": "1.0.0",
+  "description": "Data structures built with javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Alexander Arcombe",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^25.4.0"
+  }
+}
