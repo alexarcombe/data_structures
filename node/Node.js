@@ -19,7 +19,7 @@ Node.prototype.getValue = function () {
 /**
  * Sets the value of the next elemnt for this node.
  * @param {Node} node - The node to be linked.
- * @returns {Boolean} true, if node was linked
+ * @returns {boolean} true, if node was linked
  * @throws {TypeError} When node is not type of Node.
  */
 Node.prototype.setNext = function (node) {
@@ -40,7 +40,7 @@ Node.prototype.getNext = function () {
 
 /**
  * Checks if there is a next link.
- * @returns {Boolean} True if there is a next link, otherwise false.
+ * @returns {boolean} True if there is a next link, otherwise false.
  */
 Node.prototype.hasNext = function () {
   return this.next !== null;
@@ -59,7 +59,7 @@ Node.prototype.removeNext = function () {
 /**
  * Sets the value of the prev elemnt for this node.
  * @param {Node} node - The node to be linked.
- * @returns {Boolean} true, if node was linked.
+ * @returns {boolean} true, if node was linked.
  * @throws {TypeError} When node is not type of Node.
  */
 Node.prototype.setPrev = function (node) {
@@ -80,7 +80,7 @@ Node.prototype.getPrev = function () {
 
 /**
  * Checks if there is a prev link.
- * @returns {Boolean} True if there is a prev link, otherwise false.
+ * @returns {boolean} True if there is a prev link, otherwise false.
  */
 Node.prototype.hasPrev = function () {
   return this.prev !== null;

@@ -11,7 +11,7 @@ function LinkedList() {
 
 /**
  * Returns the size of the linked list.
- * @returns {Number} size
+ * @returns {number} size
  */
 LinkedList.prototype.getSize = function () {
   return this.size;
@@ -19,7 +19,7 @@ LinkedList.prototype.getSize = function () {
 
 /**
  * Returns true if the linked list is empty, otherwise false.
- * @returns {Boolean} bool
+ * @returns {boolean} bool
  */
 LinkedList.prototype.isEmpty = function () {
   return this.getSize() === 0;
@@ -28,7 +28,7 @@ LinkedList.prototype.isEmpty = function () {
 /**
  * Adds the value to the head of the linked list.
  * @param {Object} value - The value to add.
- * @returns {Boolean} true If the value was added to the head.
+ * @returns {boolean} true If the value was added to the head.
  * @throws {TypeError} When the value was undifined or null.
  */
 LinkedList.prototype.addToHead = function (value) {
@@ -86,7 +86,7 @@ LinkedList.prototype.removeHead = function () {
 /**
  * Adds the value to the tail of the linked list.
  * @param {Object} value - The value to add.
- * @returns {Boolean} true If the value was added to the tail.
+ * @returns {boolean} true If the value was added to the tail.
  * @throws {TypeError} When the value was undifined or null.
  */
 LinkedList.prototype.addToTail = function (value) {
@@ -144,8 +144,8 @@ LinkedList.prototype.removeTail = function () {
 /**
  * Returns true if the linked list contains value, otherwise false.
  * @param {Object} value - The value to search for.
- * @param {String} [start=head] - Where the search should start from.
- * @returns {Boolean} bool
+ * @param {string} [start=head] - Where the search should start from.
+ * @returns {boolean} bool
  * @throws {TypeError} When the value was undifined or null.
  */
 LinkedList.prototype.contains = function (value, start = 'head') {
@@ -168,7 +168,7 @@ LinkedList.prototype.contains = function (value, start = 'head') {
 /**
  * Returns index of first value found in the linked list, returns -1 if not present.
  * @param {Object} value - The value to search for.
- * @returns {Number} index
+ * @returns {number} index
  * @throws {TypeError} When the value was undifined or null.
  */
 LinkedList.prototype.indexOf = function (value) {
