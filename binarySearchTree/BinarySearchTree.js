@@ -1,5 +1,8 @@
 const Node = require('../node/Node');
 
+/**
+ * Creates a new empty binary search tree.
+ */
 function BST() {
   this.size = 0;
   this.root = null;
