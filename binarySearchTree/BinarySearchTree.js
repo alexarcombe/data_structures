@@ -87,6 +87,11 @@ BST.prototype.contains = function (value) {
   return contains(value, this.root);
 };
 
+/**
+ * Helper function for contains.
+ * @param {number} value
+ * @param {Node} node
+ */
 function contains(value, node) {
   const nodeValue = node.getValue();
   if (nodeValue === value) {
@@ -99,63 +104,64 @@ function contains(value, node) {
 }
 
 /**
- * Depth first traversal over the tree and applies itr to each node.
- * @param {Function} itr - Then function applied to the elements
+ * Depth first traversal over the tree and applies callback function to each node.
+ * @param {Function} callback - Then function applied to the elements
  * @param {string} order - The order of traversal
  */
-BST.prototype.depthFirstTraversal = function (itr, order = 'preorder') {
+BST.prototype.depthFirstTraversal = function (callback, order = 'preorder') {
   if (this.isEmpty()) {
     return false;
   }
-  depthFirstTraversal(itr, this.root, order);
+  depthFirstTraversal(callback, this.root, order);
 };
 
 /**
  * Helper function for depth first traversal.
- * @param {Function} itr - Then function applied to the elements
+ * @param {Function} callback - Then function applied to the elements
  * @param {Node} node - Current node.
  * @param {string} order - The order of traversal
  */
-function depthFirstTraversal(itr, node, order) {
+function depthFirstTraversal(callback, node, order) {
   if (order === 'preorder') {
-    itr(node);
+    callback(node);
   }
   if (node.hasPrev()) {
-    depthFirstTraversal(itr, node.getPrev(), order);
+    depthFirstTraversal(callback, node.getPrev(), order);
   }
   if (order === 'inorder') {
-    itr(node);
+    console.log(callback);
+    callback(node);
   }
   if (node.hasNext()) {
-    depthFirstTraversal(itr, node.getNext(), order);
+    depthFirstTraversal(callback, node.getNext(), order);
   }
   if (order === 'postorder') {
-    itr(node);
+    callback(node);
   }
 }
 
 /**
- * Breath first traversal over the tree and applies itr to each node.
- * @param {Function} itr - Then function applied to the elements
+ * Breath first traversal over the tree and applies callback to each node.
+ * @param {Function} callback - Then function applied to the elements
  */
-BST.prototype.breadthFirstTraversal = function (itr) {
+BST.prototype.breadthFirstTraversal = function (callback) {
   if (this.isEmpty()) {
     return false;
   }
-  breadthFirstTraversal(itr, this.root);
+  breadthFirstTraversal(callback, this.root);
 };
 
 /**
  * Helper function for breath first traversal.
- * @param {Function} itr - Then function applied to the elements
+ * @param {Function} callback - Then function applied to the elements
  * @param {Node} node - Root node.
  */
-function breadthFirstTraversal(itr, node) {
+function breadthFirstTraversal(callback, node) {
   let current;
   const queue = [node];
   while (queue.length) {
     current = queue.shift();
-    itr(current);
+    callback(current);
     if (current.hasPrev()) {
       queue.push(current.getPrev());
     }

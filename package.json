@@ -4,7 +4,7 @@
   "description": "Data structures built with javascript",
   "main": "index.js",
   "scripts": {
-    "test": "jest --collect-coverage hashTable/HashTable.test.js "
+    "test": "jest --collect-coverage"
   },
   "author": "Alexander Arcombe",
   "license": "ISC",
